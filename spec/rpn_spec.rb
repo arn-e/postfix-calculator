@@ -1,4 +1,5 @@
-require './rpn_calculator'
+require 'rspec'
+require_relative '../rpn_calculator'
 
 describe RPNCalculator do
   let(:rpn) { RPNCalculator.new }
