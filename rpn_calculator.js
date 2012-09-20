@@ -1,7 +1,13 @@
-//PostFix Calculator
+// Array Remove - By John Resig (MIT Licensed)
+Array.prototype.remove = function(from, to) {
+  var rest = this.slice((to || from) + 1 || this.length);
+  this.length = from < 0 ? this.length + from : from;
+  return this.push.apply(this, rest);
+};
+
 function evaluate(input){
-	elem = input.split(' ');
-	calculate(elem);
+	var elem = input.split(' ');
+	return calculate(elem);
 }
 
 function calculate(elem){
@@ -14,14 +20,7 @@ function calculate(elem){
 			}
 		}
 	}
-	return elem[0];
+	return Number(elem[0]);
 }
 
-// Array Remove - By John Resig (MIT Licensed)
-Array.prototype.remove = function(from, to) {
-  var rest = this.slice((to || from) + 1 || this.length);
-  this.length = from < 0 ? this.length + from : from;
-  return this.push.apply(this, rest);
-};
-
-evaluate("5 2 3 4 + * -");
+console.log(evaluate("5 2 3 4 + * -"));
