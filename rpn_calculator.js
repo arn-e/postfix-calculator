@@ -5,6 +5,7 @@ Array.prototype.remove = function(from, to) {
   return this.push.apply(this, rest);
 };
 
+//PostFix Calculator
 function evaluate(input){
 	var elem = input.split(' ');
 	return calculate(elem);
