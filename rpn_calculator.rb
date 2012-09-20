@@ -1,10 +1,10 @@
 class RPNCalculator
-	
+
 	def evaluate(input)
 		elements = input.split
 		calculate(elements)
-	end		
-
+	end
+			
 	def calculate(elements)
 		if (elements.length > 1)
 			for i in 0..(elements.length - 1)
