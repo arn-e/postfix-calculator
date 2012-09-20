@@ -23,5 +23,3 @@ function calculate(elem){
     }
     return Number(elem[0]);
 }
-
-console.log(evaluate("5 2 3 4 + * -"));
